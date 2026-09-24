@@ -1,0 +1,7 @@
+
+prebuilt_etc {
+    name: "0015.jpg",
+    vendor: true,
+    src: "0015.jpg",
+    sub_dir: "input_data",
+}

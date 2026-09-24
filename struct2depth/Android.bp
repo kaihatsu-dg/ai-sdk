@@ -1,0 +1,38 @@
+
+cc_binary {
+    name: "struct2depth",
+
+    vendor: true,
+    defaults: [
+        "libviplite_compat"
+    ],
+
+    srcs: [
+        "main.cpp",
+        "class_post.cpp",
+        "class_pre.cpp",
+        "npulib.cpp",
+        "npu_util.cpp",
+    ],
+
+    shared_libs: [
+        "liblog",
+    ],
+
+    static_libs: [
+        "libawutils",
+        "libopencv",
+    ],
+
+    required: [
+        "struct2depth.nb",
+        "0015.jpg",
+        "struct2depth.sh",
+    ],
+
+}
+
+sh_binary {
+    name: "struct2depth.sh",
+    src: "struct2depth.sh",
+}
